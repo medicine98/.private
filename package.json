@@ -1,0 +1,15 @@
+{
+     "main" : "load.html" ,                              /* APP的主入口，文件名任意；必选 */
+     "name" : "wifilife" ,                                /* APP的名称，必须具备唯一性，且符合正常变量命名；必选 */
+     "description" : "wifilife" ,         /* APP的简单描述 */
+     "version" : "0.1.0" ,                               /* APP的版本号 */
+     "keywords" : [ "wifilife" ],            /* APP的关键字，搜索APP时用到 */
+     "window" : {                                       /* APP的窗口属性 */
+         "icon" : "link.png" ,                           /* APP图标（windows下，状态栏上可见） */
+         "toolbar" : false ,                              /* 是否显示工具栏 */
+         "width" : 1000,                                 /* 窗口初始化大小 */
+         "height" : 700,
+         "frame" : true                                 /* 是否显示外窗体，如最大化、最小化、关闭按钮 */
+     },
+     "user-agent" : "%name %ver %nwver %webkit_ver %osinfo" /* 可自定义APP的UA */
+}

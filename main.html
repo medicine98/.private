@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>欢迎来到WiFiLife官方客户端</title>
+<style type="text/css">
+body p {
+	color: #FFFF80;
+}
+</style>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.rotate.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$('#img1').rotate({angle:45});
+
+$("#img2").rotate({ 
+   bind: 
+     { 
+        mouseover : function() { 
+            $(this).rotate({animateTo:180});
+        },
+        mouseout : function() { 
+            $(this).rotate({animateTo:0});
+        }
+     } 
+   
+});
+
+
+var angle = 0;
+setInterval(function(){
+      angle+=3;
+     $("#img3").rotate(angle);
+},50);
+
+
+var rotation = function (){
+   $("#img4").rotate({
+      angle:0, 
+      animateTo:360, 
+      callback: rotation
+   });
+}
+rotation();
+
+
+
+var rotation2 = function (){
+   $("#img5").rotate({
+      angle:0, 
+      animateTo:360, 
+      callback: rotation2,
+      easing: function (x,t,b,c,d){        // t: current time, b: begInnIng value, c: change In value, d: duration
+          return c*(t/d)+b;
+      }
+   });
+}
+rotation2();
+
+
+$("#img6").rotate({ 
+   bind: 
+     { 
+        click: function(){
+            $(this).rotate({ angle:0,animateTo:180,easing: $.easing.easeInOutExpo })
+        }
+     } 
+   
+});
+
+
+var value2 = 0
+$("#img7").rotate({ 
+   bind: 
+     { 
+        click: function(){
+            value2 +=90;
+            $(this).rotate({ animateTo:value2})
+        }
+     } 
+   
+});
+
+});
+</script>
+<script>
+ var html=('<title>Fooooooooooooooooooooooooooooooool</title><h1>This is a diffrent WORLD!!!</h1>');
+</script>
+<script>
+function button() {
+	document.write(html)
+	alert ('The Gate Is OPEN');
+}
+</script>
+
+
+</head></head>
+<body>
+<script type="text/javascript" src="js/wz_tooltip.js"></script> 
+<script type="text/javascript" src="js/tangram.js"></script>
+<h1>欢迎来到神奇的WiFiLife官方站客户端，点击下面的按钮进入</h1>
+<p>欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！</p>
+<p>欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！欢迎！</p>
+<h2>in:</h2><a href="in.html"><img id="img1" src="images/link.png" width="100" height="100"/></a>
+<a href="in.html"><img id="img2" src="images/link.png" width="100" height="100" /></a>
+<a href="in.html"><img id="img3" src="images/link.png" width="100" height="100"/></a>
+<a href="in.html"><img id="img4" src="images/link.png" width="100" height="100"/></a>
+<a href="in.html"><img id="img5" src="images/link.png" width="100" height="100"/></a>
+<a href="in.html"><img id="img6" src="images/link.png" width="100" height="100"/></a>
+<a href="in.html"><img id="img7" src="images/link.png" width="100" height="100"/></a>
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+</div>
+注意：
+<p><h2>请确定您的电脑能上网！</h2></body>
+<a type="button" onMouseOver="Tip('点击这里，新的世界就会想着你，时刻牵挂着你，知道你的生老病死')" onMouseOut="UnTip()"onclick="button()" >点击这里，新的世界将向你展开！</a>
+</html>
+
